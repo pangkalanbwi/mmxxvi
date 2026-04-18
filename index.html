@@ -215,9 +215,7 @@
 <body class="p-0 sm:p-12 lg:p-16 relative min-h-screen overflow-x-hidden selection:bg-orange-100">
 
     <!-- Offline Banner -->
-    <div id="offlineBanner">
-        ⚠️ Mode Offline - Menampilkan data tersimpan terakhir
-    </div>
+    <div id="offlineBanner">⚠️ Mode Offline - Menampilkan data tersimpan terakhir</div>
 
     <!-- Splash Screen -->
     <div id="splashScreen">
@@ -270,7 +268,6 @@
                     <i data-lucide="award" size="14" stroke="#ffffff"></i>
                 </div>
             </div>
-
             <div class="flex flex-col items-center md:items-start">
                 <h1 class="marker text-4xl md:text-8xl tracking-tighter leading-none mb-3 md:mb-6 text-[#1a1a1a]">RM PANGKALAN</h1>
                 <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
@@ -281,7 +278,6 @@
                 </div>
             </div>
         </div>
-
         <div class="flex flex-col items-center md:items-end gap-5 shrink-0">
             <div class="flex items-center gap-4 opacity-70">
                 <div class="space-y-1 text-right text-[10px] uppercase tracking-widest font-bold hidden md:block text-[#1a1a1a]">
@@ -300,7 +296,6 @@
 
     <!-- Search & Nav Container -->
     <div class="max-w-4xl mx-auto mb-10 px-4 sm:px-0 sticky top-0 sm:top-4 z-40 space-y-4 text-center">
-        <!-- Search Bar -->
         <div class="search-container bg-white/70 backdrop-blur-md rounded-2xl px-5 py-2.5 flex items-center gap-3 shadow-sm border border-black/5 group max-w-md mx-auto">
             <i data-lucide="search" size="16" class="text-gray-400 group-focus-within:text-accent transition-colors"></i>
             <input type="text" id="menuSearch" oninput="handleSearch(this.value)" placeholder="Cari menu favorit..." class="bg-transparent border-none outline-none w-full text-xs font-semibold text-ink placeholder:text-gray-300 placeholder:italic">
@@ -308,8 +303,6 @@
                 <i data-lucide="x" size="12" class="text-gray-400"></i>
             </button>
         </div>
-        
-        <!-- Tab Navigation -->
         <nav class="bg-white/80 backdrop-blur-xl -mx-4 sm:mx-0 px-2 sm:px-4 py-4 sm:rounded-full border-b sm:border-2 border-black/5 shadow-xl flex justify-start md:justify-center gap-2 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth">
             <button onclick="filterMenu('all')" class="tab-btn active px-4 py-2 flex items-center gap-2 font-bold uppercase text-[9px] tracking-[0.2em] text-[#1a1a1a]"><i data-lucide="layout-grid" size="14"></i> SEMUA</button>
             <button onclick="filterMenu('makanan')" class="tab-btn px-4 py-2 flex items-center gap-2 font-bold uppercase text-[9px] tracking-[0.2em] text-[#1a1a1a]"><i data-lucide="soup" size="14"></i> MAKANAN</button>
@@ -320,9 +313,7 @@
     </div>
 
     <!-- Main Content -->
-    <main id="mainContent" class="max-w-6xl mx-auto pb-40 px-2 sm:px-0">
-        <!-- JS Rendered -->
-    </main>
+    <main id="mainContent" class="max-w-6xl mx-auto pb-40 px-2 sm:px-0"></main>
 
     <!-- Floating UI: Cart -->
     <div id="cartTrigger" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[280px] sm:max-w-xs px-2">
@@ -351,7 +342,6 @@
     <div id="cartModal" class="modal-overlay fixed inset-0 z-[110] flex items-center justify-center p-1 sm:p-4" onclick="closeCart()">
         <div class="modal-box bg-white w-full max-w-md rounded-[30px] md:rounded-[40px] shadow-2xl p-4 sm:p-10 relative" onclick="event.stopPropagation()">
             <h2 class="marker text-3xl md:text-4xl mb-6 text-center text-[#1a1a1a]">Ringkasan Pesanan</h2>
-            
             <div class="bg-gray-50 rounded-2xl p-4 sm:p-6 mb-6 border border-gray-100 space-y-4 text-ink">
                 <div class="grid grid-cols-2 gap-3 text-[#1a1a1a]">
                     <div class="col-span-2">
@@ -377,14 +367,11 @@
                     </div>
                 </div>
             </div>
-
             <div id="cartItemsList" class="max-h-56 overflow-y-auto no-scrollbar space-y-3 mb-6"></div>
-            
             <div class="border-t-2 border-dashed border-gray-200 pt-6 mb-6 flex justify-between items-center px-1">
                 <span class="marker text-2xl text-[#1a1a1a]">Total</span>
                 <span id="cartTotalPrice" class="price-tag text-2xl md:text-3xl text-[#1a1a1a]">Rp 0</span>
             </div>
-            
             <button id="checkoutBtn" onclick="processCheckout()" class="w-full bg-[#1a1a1a] text-white py-4 rounded-xl font-bold hover:bg-orange-600 transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
                 <i data-lucide="check-circle" stroke="#ffffff"></i> <span id="checkoutText">Bayar di Kasir</span>
             </button>
@@ -403,32 +390,26 @@
                     <p id="recID" class="font-bold"></p>
                     <p id="recTime"></p>
                 </div>
-                
                 <div class="mb-4 space-y-1">
                     <p>Nama: <span id="recCustName" class="font-bold"></span></p>
                     <p>Tipe: <span id="recType"></span></p>
                     <p id="recTableShow">Meja: <span id="recTable"></span></p>
                 </div>
-
                 <div class="border-b border-dashed border-black mb-4"></div>
                 <div id="recItems" class="space-y-2 mb-4"></div>
                 <div class="border-b border-dashed border-black mb-4"></div>
-                
                 <div class="space-y-1">
                     <div class="flex justify-between"><span>Subtotal</span> <span id="recSub"></span></div>
                     <div class="flex justify-between"><span>Pajak (10%)</span> <span id="recTax"></span></div>
                     <div class="flex justify-between font-bold text-sm mt-3 border-t border-black pt-2">
-                        <span>TOTAL AKHIR</span> 
-                        <span id="recTotal" class="text-lg"></span>
+                        <span>TOTAL AKHIR</span> <span id="recTotal" class="text-lg"></span>
                     </div>
                 </div>
-                
                 <div class="text-center mt-10">
                     <p class="mb-2 italic lowercase opacity-70">*Simpan struk ini untuk pembayaran.</p>
                     <p class="text-[10px] font-bold">Terima Kasih!</p>
                 </div>
             </div>
-            
             <div class="flex flex-col items-center gap-4 no-print w-full max-w-sm px-2 pb-10">
                 <div class="flex justify-center gap-3 w-full">
                     <button onclick="downloadReceipt()" class="flex-1 bg-green-600 text-white py-4 rounded-full font-bold flex items-center justify-center gap-2 shadow-lg hover:bg-green-700 transition-all text-[11px] uppercase tracking-wider">
@@ -461,7 +442,6 @@
     <!-- Footer -->
     <footer class="max-w-6xl mx-auto py-16 text-center reveal active px-4 border-t border-black/5 mt-10">
         <p class="serif italic text-xl sm:text-2xl mb-8 text-[#1a1a1a]">Terima Kasih Atas Kunjungan Anda</p>
-        
         <div class="flex justify-center gap-4 mb-10">
             <a href="https://wa.me/628123456789" target="_blank" class="socmed-icon" aria-label="WhatsApp">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.1a8.38 8.38 0 0 1 7.6 10.2z"></path><path d="m16 13-2 1a2 2 0 0 1-2.18-.05c-.39-.29-.8-.61-1.19-1s-.71-.8-1.19-1.19a2 2 0 0 1-.05-2.18l1-2"></path></svg>
@@ -476,11 +456,8 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E4405F" stroke-width="2.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
             </a>
         </div>
-        
         <p class="text-[8px] font-bold tracking-[0.5em] uppercase text-[#1a1a1a] mb-2">&copy; MMXXVI RM PANGKALAN &bull; DIGITAL MENU EXPERIENCE</p>
-        <a href="https://www.google.com/maps?q=-8.4369155,114.1940459" target="_blank" class="text-[7px] uppercase tracking-widest text-gray-400 hover:text-accent transition-colors">
-            JAJAG, BANYUWANGI | LAT: -8.4369155 | LONG: 114.1940459
-        </a>
+        <a href="https://www.google.com/maps?q=-8.4369155,114.1940459" target="_blank" class="text-[7px] uppercase tracking-widest text-gray-400 hover:text-accent transition-colors">JAJAG, BANYUWANGI | LAT: -8.4369155 | LONG: 114.1940459</a>
     </footer>
 
     <!-- API Configuration & Core Logic -->
@@ -488,15 +465,19 @@
         // ============ CONFIGURATION ============
         const CONFIG = {
             GAS_URL: 'https://script.google.com/macros/s/AKfycbxlW-KDoDBxGCBQpGIVXdV9gO6dAw4AMp7ZHhn_bOcK7D6mGffnAxi-G3PzWUZH8Ol6xw/exec',
-            CACHE_KEYS: {
-                MENU: 'pangkalan_menu_cache',
-                SETTINGS: 'pangkalan_settings_cache',
-                CART: 'pangkalan_cart',
-                USER: 'pangkalan_user'
-            },
-            CACHE_TTL: {
-                MENU: 5 * 60 * 1000,    // 5 menit
-                SETTINGS: 10 * 60 * 1000 // 10 menit
+            CACHE_KEYS: { MENU: 'pangkalan_menu_cache', SETTINGS: 'pangkalan_settings_cache', CART: 'pangkalan_cart', USER: 'pangkalan_user' },
+            CACHE_TTL: { MENU: 5 * 60 * 1000, SETTINGS: 10 * 60 * 1000 },
+            // Data normalization rules for CSV inconsistencies
+            DATA_RULES: {
+                CATEGORY_MAP: {
+                    'makanan': ['makanan', 'Makanan', 'MAKANAN', 'food'],
+                    'segeran': ['segeran', 'Segeran', 'SEGERAN', 'drink', 'minuman'],
+                    'wedangan': ['wedangan', 'Wedangan', 'WEDANGAN', 'warm', 'hangat'],
+                    'camilan': ['camilan', 'Camilan', 'CAMILAN', 'snack']
+                },
+                PRICE_PATTERNS: [/^Rp\s?([\d.,]+)$/, /^([\d.,]+)$/, /^(\d+)$/],
+                BOOLEAN_TRUE: ['TRUE', 'true', '1', 'yes', 'Ya', 'YA'],
+                BOOLEAN_FALSE: ['FALSE', 'false', '0', 'no', 'Tidak', 'TIDAK']
             }
         };
 
@@ -511,881 +492,284 @@
         let isOnline = navigator.onLine;
         let apiLoading = false;
 
+        // ============ DATA NORMALIZATION (FIX CSV ISSUES) ============
+        function normalizeMenuItem(raw) {
+            if (!raw || typeof raw !== 'object') return null;
+            const get = (key, fallback = null) => {
+                const val = raw[key];
+                return (val === undefined || val === null || val === '') ? fallback : val;
+            };
+            
+            // Normalize kategori: "Makanan" → "makanan"
+            const rawKategori = get('kategori', '').toString().toLowerCase().trim();
+            let normalizedKategori = rawKategori;
+            for (const [canonical, variations] of Object.entries(CONFIG.DATA_RULES.CATEGORY_MAP)) {
+                if (variations.includes(rawKategori)) { normalizedKategori = canonical; break; }
+            }
+            
+            // Normalize harga: "Rp 85,000" → 85000
+            const rawHarga = get('harga', 0);
+            let normalizedHarga = 0;
+            if (typeof rawHarga === 'number') normalizedHarga = rawHarga;
+            else if (typeof rawHarga === 'string') {
+                for (const pattern of CONFIG.DATA_RULES.PRICE_PATTERNS) {
+                    const match = rawHarga.match(pattern);
+                    if (match) { normalizedHarga = parseInt(match[1].replace(/[.,]/g, ''), 10) || 0; break; }
+                }
+            }
+            
+            // Normalize boolean: "TRUE" → true
+            const normalizeBoolean = (val, defaultVal = false) => {
+                if (typeof val === 'boolean') return val;
+                if (typeof val === 'string') {
+                    const v = val.trim().toUpperCase();
+                    if (CONFIG.DATA_RULES.BOOLEAN_TRUE.includes(v)) return true;
+                    if (CONFIG.DATA_RULES.BOOLEAN_FALSE.includes(v)) return false;
+                }
+                if (typeof val === 'number') return val === 1;
+                return defaultVal;
+            };
+            
+            // Normalize coordinate: "-84,369,155" → -8.4369155
+            const normalizeCoordinate = (val, defaultVal = 0) => {
+                if (typeof val === 'number') return val;
+                if (typeof val === 'string') {
+                    let cleaned = val.replace(/\s/g, '');
+                    if (cleaned.includes(',') && !cleaned.includes('.')) {
+                        const parts = cleaned.split(',');
+                        if (parts.length === 2 && parts[1].length <= 7) return parseFloat(parts[0] + '.' + parts[1]) || defaultVal;
+                        cleaned = cleaned.replace(/,/g, '');
+                    }
+                    return parseFloat(cleaned) || defaultVal;
+                }
+                return defaultVal;
+            };
+            
+            const normalizeTags = (val) => {
+                if (!val) return [];
+                if (Array.isArray(val)) return val.map(String).map(t => t.trim()).filter(Boolean);
+                if (typeof val === 'string') return val.split(',').map(t => t.trim()).filter(Boolean);
+                return [];
+            };
+            
+            return {
+                id: get('id', `M${Date.now()}`),
+                nama: sanitizeString(get('nama', 'Untitled')),
+                kategori: normalizedKategori,
+                harga: normalizedHarga,
+                deskripsi: sanitizeString(get('deskripsi', '')),
+                image_lh3_url: normalizeImageUrl(get('image_lh3_url', '')),
+                stok: parseInt(get('stok', 0)) || 0,
+                tersedia: normalizeBoolean(get('tersedia'), true),
+                is_chef_pick: normalizeBoolean(get('is_chef_pick'), false),
+                badge: sanitizeString(get('badge', '')),
+                allergen_tags: normalizeTags(get('allergen_tags')),
+                prep_time_min: parseInt(get('prep_time_min', 10)) || 10
+            };
+        }
+
+        function sanitizeString(str, maxLength = 500) {
+            if (typeof str !== 'string') return '';
+            return str.slice(0, maxLength).replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
+        }
+
+        function normalizeImageUrl(url) {
+            if (!url || typeof url !== 'string') return '';
+            if (url.includes('lh3.googleusercontent.com')) return url;
+            const patterns = [/\/d\/([a-zA-Z0-9_-]+)\//, /file\/d\/([a-zA-Z0-9_-]+)\//, /id=([a-zA-Z0-9_-]+)/, /^([a-zA-Z0-9_-]+)$/];
+            for (const pattern of patterns) {
+                const match = url.match(pattern);
+                if (match) return `https://lh3.googleusercontent.com/d/${match[1]}=w800-h600-c-k`;
+            }
+            return url;
+        }
+
         // ============ API CLIENT ============
         const API = {
             async call(action, payload = {}, requiresAuth = false) {
                 const token = this.getToken();
-                
-                const body = {
-                    action,
-                    token: requiresAuth ? token : null,
-                    payload
-                };
-
+                const body = { action, token: requiresAuth ? token : null, payload };
                 try {
                     const controller = new AbortController();
-                    const timeout = setTimeout(() => controller.abort(), 15000); // 15s timeout
-
-                    const response = await fetch(CONFIG.GAS_URL, {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify(body),
-                        signal: controller.signal
-                    });
-                    
+                    const timeout = setTimeout(() => controller.abort(), 15000);
+                    const response = await fetch(CONFIG.GAS_URL, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body), signal: controller.signal });
                     clearTimeout(timeout);
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                    }
-                    
+                    if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                     const result = await response.json();
-                    
-                    if (!result.success) {
-                        throw new Error(result.error || result.message || 'Unknown error');
-                    }
-                    
+                    if (!result.success) throw new Error(result.error || result.message || 'Unknown error');
                     return result.data;
-                    
                 } catch (error) {
                     console.error(`API Error [${action}]:`, error);
-                    
-                    if (error.name === 'AbortError') {
-                        throw new Error('Koneksi timeout. Periksa internet Anda.');
-                    }
-                    if (error.message.includes('Failed to fetch') || error.name === 'TypeError') {
-                        throw new Error('Tidak dapat terhubung ke server. Mode offline diaktifkan.');
-                    }
+                    if (error.name === 'AbortError') throw new Error('Koneksi timeout. Periksa internet Anda.');
+                    if (error.message.includes('Failed to fetch') || error.name === 'TypeError') throw new Error('Tidak dapat terhubung ke server.');
                     throw error;
                 }
             },
-            
-            getToken() {
-                const user = JSON.parse(localStorage.getItem(CONFIG.CACHE_KEYS.USER) || 'null');
-                return user?.token || null;
-            },
-            
+            getToken() { const user = JSON.parse(localStorage.getItem(CONFIG.CACHE_KEYS.USER) || 'null'); return user?.token || null; },
             async getMenu(category = null) {
-                // Try cache first (Turbo Sync)
                 const cached = this.getCachedMenu();
-                if (cached) {
-                    console.log('⚡ Menu loaded from cache');
-                    return cached;
-                }
-                
-                // Fetch from API
+                if (cached) return cached;
                 const data = await this.call('get_menu', {category, available_only: true});
-                
-                // Cache the result
-                this.cacheMenu(data);
-                
-                return data;
+                // Normalize data from API (handle CSV format)
+                const normalized = Array.isArray(data) ? data.map(normalizeMenuItem).filter(i => i) : [];
+                this.cacheMenu(normalized);
+                return normalized;
             },
-            
             getCachedMenu() {
                 try {
                     const cached = localStorage.getItem(CONFIG.CACHE_KEYS.MENU);
                     if (!cached) return null;
-                    
                     const {data, timestamp} = JSON.parse(cached);
-                    const now = Date.now();
-                    
-                    // Check if cache is still valid
-                    if (now - timestamp < CONFIG.CACHE_TTL.MENU) {
-                        return data;
-                    }
-                    // Cache expired, return stale data but mark for refresh
+                    if (Date.now() - timestamp < CONFIG.CACHE_TTL.MENU) return data;
                     console.log('🔄 Cache expired, using stale data');
                     return data;
-                } catch {
-                    return null;
-                }
+                } catch { return null; }
             },
-            
             cacheMenu(data) {
-                try {
-                    localStorage.setItem(CONFIG.CACHE_KEYS.MENU, JSON.stringify({
-                        data,
-                        timestamp: Date.now()
-                    }));
-                } catch (e) {
-                    console.warn('Failed to cache menu:', e);
-                }
+                try { localStorage.setItem(CONFIG.CACHE_KEYS.MENU, JSON.stringify({data, timestamp: Date.now()})); } 
+                catch (e) { console.warn('Failed to cache menu:', e); }
             },
-            
             async getSettings() {
                 try {
                     const cached = localStorage.getItem(CONFIG.CACHE_KEYS.SETTINGS);
-                    if (cached) {
-                        const {data, timestamp} = JSON.parse(cached);
-                        if (Date.now() - timestamp < CONFIG.CACHE_TTL.SETTINGS) {
-                            return data;
-                        }
-                    }
-                    
+                    if (cached) { const {data, timestamp} = JSON.parse(cached); if (Date.now() - timestamp < CONFIG.CACHE_TTL.SETTINGS) return data; }
                     const data = await this.call('get_settings');
-                    localStorage.setItem(CONFIG.CACHE_KEYS.SETTINGS, JSON.stringify({
-                        data,
-                        timestamp: Date.now()
-                    }));
+                    localStorage.setItem(CONFIG.CACHE_KEYS.SETTINGS, JSON.stringify({data, timestamp: Date.now()}));
                     return data;
-                } catch {
-                    // Return defaults if API fails
-                    return {
-                        shop_status: 'open',
-                        tax_rate: 0.1,
-                        whatsapp_number: '628123456789'
-                    };
-                }
+                } catch { return { shop_status: 'open', tax_rate: 0.1, whatsapp_number: '628123456789', location_lat: -8.4369155, location_lng: 114.1940459 }; }
             },
-            
-            async createOrder(orderData) {
-                return await this.call('create_order', orderData, true);
-            },
-            
-            async uploadImage(base64Data, filename, folder = 'temp') {
-                return await this.call('upload_image', {
-                    data: base64Data,
-                    filename,
-                    folder
-                }, true);
-            }
+            async createOrder(orderData) { return await this.call('create_order', orderData, true); }
         };
 
         // ============ UTILITY FUNCTIONS ============
-        function formatRupiah(amount) {
-            return new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                minimumFractionDigits: 0
-            }).format(amount);
-        }
-
-        function showToast(elementId, message, duration = 2000) {
-            const toast = document.getElementById(elementId);
-            if (!toast) return;
-            
-            toast.textContent = message;
-            toast.style.opacity = '1';
-            
-            setTimeout(() => {
-                toast.style.opacity = '0';
-            }, duration);
-        }
-
-        function showError(message) {
-            showToast('errorToast', message, 4000);
-        }
+        function formatRupiah(amount) { return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(amount); }
+        function showToast(elementId, message, duration = 2000) { const toast = document.getElementById(elementId); if (!toast) return; toast.textContent = message; toast.style.opacity = '1'; setTimeout(() => toast.style.opacity = '0', duration); }
+        function showError(message) { showToast('errorToast', message, 4000); }
 
         // ============ INITIALIZATION ============
         async function initApp() {
             try {
-                // Check online status
                 updateOnlineStatus();
-                
-                // Load settings first (for shop status, tax rate)
                 settings = await API.getSettings();
                 updateShopStatus();
-                
-                // Load menu
                 await loadMenu();
-                
-                // Setup event listeners
                 setupEventListeners();
-                
-                // Hide splash screen
-                setTimeout(() => {
-                    const splash = document.getElementById('splashScreen');
-                    if (splash) {
-                        splash.style.opacity = '0';
-                        setTimeout(() => splash.style.visibility = 'hidden', 1000);
-                    }
-                }, 1500);
-                
-                // Initial render
-                updateCartUI();
-                renderMenu();
-                lucide.createIcons();
-                
+                setTimeout(() => { const splash = document.getElementById('splashScreen'); if (splash) { splash.style.opacity = '0'; setTimeout(() => splash.style.visibility = 'hidden', 1000); }}, 1500);
+                updateCartUI(); renderMenu(); lucide.createIcons();
             } catch (error) {
                 console.error('Init error:', error);
                 document.getElementById('splashStatus').textContent = '⚠️ Menggunakan data lokal';
-                
-                // Fallback to cached/offline mode
                 const cachedMenu = API.getCachedMenu();
-                if (cachedMenu) {
-                    menuItems = cachedMenu;
-                    renderMenu();
-                } else {
-                    // Show offline placeholder
-                    document.getElementById('mainContent').innerHTML = `
-                        <div class="text-center py-20 px-4">
-                            <i data-lucide="wifi-off" size="48" class="mx-auto text-gray-400 mb-4"></i>
-                            <h3 class="serif text-xl mb-2">Tidak dapat memuat menu</h3>
-                            <p class="text-gray-500 text-sm mb-6">Periksa koneksi internet Anda atau coba lagi nanti.</p>
-                            <button onclick="location.reload()" class="bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-sm font-bold">
-                                Coba Lagi
-                            </button>
-                        </div>`;
-                    lucide.createIcons();
-                }
-                
-                setTimeout(() => {
-                    document.getElementById('splashScreen').style.opacity = '0';
-                    setTimeout(() => document.getElementById('splashScreen').style.visibility = 'hidden', 1000);
-                }, 2000);
+                if (cachedMenu) { menuItems = cachedMenu; renderMenu(); }
+                else { document.getElementById('mainContent').innerHTML = `<div class="text-center py-20 px-4"><i data-lucide="wifi-off" size="48" class="mx-auto text-gray-400 mb-4"></i><h3 class="serif text-xl mb-2">Tidak dapat memuat menu</h3><p class="text-gray-500 text-sm mb-6">Periksa koneksi internet Anda.</p><button onclick="location.reload()" class="bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-sm font-bold">Coba Lagi</button></div>`; lucide.createIcons(); }
+                setTimeout(() => { document.getElementById('splashScreen').style.opacity = '0'; setTimeout(() => document.getElementById('splashScreen').style.visibility = 'hidden', 1000); }, 2000);
             }
         }
 
         function updateOnlineStatus() {
             isOnline = navigator.onLine;
             const banner = document.getElementById('offlineBanner');
-            
-            if (!isOnline) {
-                banner.classList.add('show');
-                document.getElementById('checkoutBtn').disabled = true;
-                document.getElementById('checkoutText').textContent = 'Offline - Tidak Bisa Order';
-            } else {
-                banner.classList.remove('show');
-                document.getElementById('checkoutBtn').disabled = false;
-                document.getElementById('checkoutText').textContent = 'Bayar di Kasir';
-            }
+            if (!isOnline) { banner.classList.add('show'); document.getElementById('checkoutBtn').disabled = true; document.getElementById('checkoutText').textContent = 'Offline - Tidak Bisa Order'; }
+            else { banner.classList.remove('show'); document.getElementById('checkoutBtn').disabled = false; document.getElementById('checkoutText').textContent = 'Bayar di Kasir'; }
         }
 
         function updateShopStatus() {
-            const statusEl = document.getElementById('shopStatus');
-            const statusDot = statusEl.querySelector('.status-dot');
-            const statusText = document.getElementById('statusText');
-            
-            const status = settings.shop_status || 'open';
-            
-            if (status === 'open') {
-                statusEl.className = 'px-3 py-0.5 rounded-full text-[9px] font-bold tracking-widest uppercase border bg-green-50 text-green-700 border-green-200 flex items-center';
-                statusDot.className = 'status-dot online';
-                statusText.textContent = 'BUKA SEKARANG';
-            } else if (status === 'closed') {
-                statusEl.className = 'px-3 py-0.5 rounded-full text-[9px] font-bold tracking-widest uppercase border bg-red-50 text-red-700 border-red-200 flex items-center';
-                statusDot.className = 'status-dot offline';
-                statusText.textContent = 'TUTUP';
-            } else {
-                statusEl.className = 'px-3 py-0.5 rounded-full text-[9px] font-bold tracking-widest uppercase border bg-yellow-50 text-yellow-700 border-yellow-200 flex items-center';
-                statusDot.className = 'status-dot syncing';
-                statusText.textContent = 'MAINTENANCE';
-            }
+            const statusEl = document.getElementById('shopStatus'), statusDot = statusEl.querySelector('.status-dot'), statusText = document.getElementById('statusText'), status = settings.shop_status || 'open';
+            if (status === 'open') { statusEl.className = 'px-3 py-0.5 rounded-full text-[9px] font-bold tracking-widest uppercase border bg-green-50 text-green-700 border-green-200 flex items-center'; statusDot.className = 'status-dot online'; statusText.textContent = 'BUKA SEKARANG'; }
+            else if (status === 'closed') { statusEl.className = 'px-3 py-0.5 rounded-full text-[9px] font-bold tracking-widest uppercase border bg-red-50 text-red-700 border-red-200 flex items-center'; statusDot.className = 'status-dot offline'; statusText.textContent = 'TUTUP'; }
+            else { statusEl.className = 'px-3 py-0.5 rounded-full text-[9px] font-bold tracking-widest uppercase border bg-yellow-50 text-yellow-700 border-yellow-200 flex items-center'; statusDot.className = 'status-dot syncing'; statusText.textContent = 'MAINTENANCE'; }
         }
 
-        async function loadMenu() {
-            if (apiLoading) return;
-            apiLoading = true;
-            
-            try {
-                menuItems = await API.getMenu();
-                showToast('syncToast', 'Menu diperbarui!');
-            } catch (error) {
-                console.warn('Failed to fetch menu, using cached:', error);
-                // menuItems already has cached data from initApp fallback
-            } finally {
-                apiLoading = false;
-            }
-        }
+        async function loadMenu() { if (apiLoading) return; apiLoading = true; try { menuItems = await API.getMenu(); showToast('syncToast', 'Menu diperbarui!'); } catch (error) { console.warn('Failed to fetch menu:', error); } finally { apiLoading = false; } }
 
         function setupEventListeners() {
-            // Online/Offline detection
-            window.addEventListener('online', () => {
-                updateOnlineStatus();
-                loadMenu(); // Refresh when back online
-            });
+            window.addEventListener('online', () => { updateOnlineStatus(); loadMenu(); });
             window.addEventListener('offline', updateOnlineStatus);
-            
-            // Back to top visibility
-            window.addEventListener('scroll', () => {
-                const btt = document.getElementById('backToTop');
-                if (!btt) return;
-                if (window.scrollY > 400) {
-                    btt.classList.add('opacity-100', 'visible');
-                    btt.classList.remove('opacity-0', 'invisible');
-                } else {
-                    btt.classList.add('opacity-0', 'invisible');
-                    btt.classList.remove('opacity-100', 'visible');
-                }
-            });
-            
-            // Image lazy loading observer
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            if (img.dataset.src) {
-                                img.src = img.dataset.src;
-                                img.classList.remove('shimmer');
-                                observer.unobserve(img);
-                            }
-                        }
-                    });
-                }, {rootMargin: '100px'});
-                
-                document.querySelectorAll('img[data-src]').forEach(img => observer.observe(img));
-            }
+            window.addEventListener('scroll', () => { const btt = document.getElementById('backToTop'); if (!btt) return; if (window.scrollY > 400) { btt.classList.add('opacity-100', 'visible'); btt.classList.remove('opacity-0', 'invisible'); } else { btt.classList.add('opacity-0', 'invisible'); btt.classList.remove('opacity-100', 'visible'); } });
+            if ('IntersectionObserver' in window) { const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; if (img.dataset.src) { img.src = img.dataset.src; img.classList.remove('shimmer'); observer.unobserve(img); } } }); }, {rootMargin: '100px'}); document.querySelectorAll('img[data-src]').forEach(img => observer.observe(img)); }
         }
 
         // ============ MENU RENDERING ============
-        function handleSearch(val) {
-            searchQuery = val.toLowerCase().trim();
-            const clearBtn = document.getElementById('clearSearch');
-            if (searchQuery !== "") {
-                clearBtn.classList.remove('hidden');
-            } else {
-                clearBtn.classList.add('hidden');
-            }
-            renderMenu();
-        }
-
-        function filterMenu(cat) {
-            activeFilter = cat;
-            const btns = document.querySelectorAll('.tab-btn');
-            btns.forEach(b => {
-                const isActive = b.innerText.toLowerCase().includes(cat) || 
-                               (cat === 'all' && b.innerText.includes('SEMUA'));
-                b.classList.toggle('active', isActive);
-            });
-            renderMenu();
-            
-            // Smooth scroll to content on mobile
-            const offset = window.innerWidth < 640 ? 250 : 0;
-            window.scrollTo({top: offset, behavior: 'smooth'});
-        }
+        function handleSearch(val) { searchQuery = val.toLowerCase().trim(); const clearBtn = document.getElementById('clearSearch'); if (searchQuery !== "") clearBtn.classList.remove('hidden'); else clearBtn.classList.add('hidden'); renderMenu(); }
+        function filterMenu(cat) { activeFilter = cat; document.querySelectorAll('.tab-btn').forEach(b => { const isActive = b.innerText.toLowerCase().includes(cat) || (cat === 'all' && b.innerText.includes('SEMUA')); b.classList.toggle('active', isActive); }); renderMenu(); window.scrollTo({top: window.innerWidth < 640 ? 250 : 0, behavior: 'smooth'}); }
 
         function renderMenu() {
             const container = document.getElementById('mainContent');
             const categories = ['makanan', 'segeran', 'wedangan', 'camilan'];
-            
-            // Filter items
+            // Filter with normalized category comparison
             const filteredItems = menuItems.filter(item => {
-                const matchesCat = activeFilter === 'all' || item.kategori === activeFilter;
-                const matchesSearch = item.nama.toLowerCase().includes(searchQuery);
-                return matchesCat && matchesSearch;
+                const itemCat = (item.kategori || '').toLowerCase();
+                const matchesCat = activeFilter === 'all' || itemCat === activeFilter.toLowerCase();
+                const matchesSearch = (item.nama || '').toLowerCase().includes(searchQuery);
+                const isAvailable = item.tersedia === true;
+                return matchesCat && matchesSearch && isAvailable;
             });
 
-            // Show loading skeleton if no data
-            if (menuItems.length === 0 && !apiLoading) {
-                container.innerHTML = `
-                    <div class="py-20 text-center opacity-50">
-                        <i data-lucide="utensils" size="48" class="mx-auto mb-4"></i>
-                        <p class="italic">Belum ada menu tersedia</p>
-                    </div>`;
-                return;
-            }
+            if (menuItems.length === 0 && !apiLoading) { container.innerHTML = `<div class="py-20 text-center opacity-50"><i data-lucide="utensils" size="48" class="mx-auto mb-4"></i><p class="italic">Belum ada menu tersedia</p></div>`; return; }
 
             if (searchQuery === "" && activeFilter === 'all') {
-                // Homepage layout with Chef Picks
                 const chefPicks = filteredItems.filter(i => i.is_chef_pick);
-                
                 let content = `<section class="reveal active mb-20 px-1">`;
-                
-                if (chefPicks.length > 0) {
-                    content += `<h2 class="serif italic text-3xl sm:text-4xl mb-10 flex items-baseline gap-4 text-[#1a1a1a]">Pilihan Chef <div class="flex-1 sketch-line"></div></h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">`;
-                    content += chefPicks.map(item => renderChefCard(item)).join('');
-                    content += `</div>`;
-                }
+                if (chefPicks.length > 0) { content += `<h2 class="serif italic text-3xl sm:text-4xl mb-10 flex items-baseline gap-4 text-[#1a1a1a]">Pilihan Chef <div class="flex-1 sketch-line"></div></h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">`; content += chefPicks.map(item => renderChefCard(item)).join(''); content += `</div>`; }
                 content += `</section>`;
-
-                // Render other categories
-                categories.forEach(cat => {
-                    const items = filteredItems.filter(i => i.kategori === cat && !i.is_chef_pick);
-                    if(items.length > 0) {
-                        content += `<section class="reveal active mb-16 px-1">`;
-                        content += `<h2 class="serif italic text-2xl sm:text-3xl mb-8 flex items-baseline gap-4 capitalize text-[#1a1a1a]">${cat} <div class="flex-1 sketch-line"></div></h2>`;
-                        content += `<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">`;
-                        content += items.map(item => renderListItem(item)).join('');
-                        content += `</div></section>`;
-                    }
-                });
+                categories.forEach(cat => { const items = filteredItems.filter(i => (i.kategori||'').toLowerCase() === cat && !i.is_chef_pick); if(items.length > 0) { content += `<section class="reveal active mb-16 px-1"><h2 class="serif italic text-2xl sm:text-3xl mb-8 flex items-baseline gap-4 capitalize text-[#1a1a1a]">${cat} <div class="flex-1 sketch-line"></div></h2><div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">`; content += items.map(item => renderListItem(item)).join(''); content += `</div></section>`; } });
                 container.innerHTML = content;
-                
             } else {
-                // Search/Filter results layout
                 const title = searchQuery !== "" ? `Hasil: "${searchQuery}"` : activeFilter;
-                
-                if (filteredItems.length === 0) {
-                    container.innerHTML = `
-                        <div class="py-20 text-center opacity-30 italic marker text-xl text-ink">
-                            <i data-lucide="search-x" size="48" class="mx-auto mb-4"></i>
-                            Menu tidak ditemukan...
-                        </div>`;
-                } else {
-                    container.innerHTML = `
-                        <section class="reveal active px-1">
-                            <h2 class="serif italic text-3xl sm:text-4xl mb-12 flex items-baseline gap-4 capitalize text-[#1a1a1a]">${title} <div class="flex-1 sketch-line"></div></h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                                ${filteredItems.map(item => renderGridCard(item)).join('')}
-                            </div>
-                        </section>`;
-                }
+                if (filteredItems.length === 0) { container.innerHTML = `<div class="py-20 text-center opacity-30 italic marker text-xl text-ink"><i data-lucide="search-x" size="48" class="mx-auto mb-4"></i>Menu tidak ditemukan...</div>`; }
+                else { container.innerHTML = `<section class="reveal active px-1"><h2 class="serif italic text-3xl sm:text-4xl mb-12 flex items-baseline gap-4 capitalize text-[#1a1a1a]">${title} <div class="flex-1 sketch-line"></div></h2><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">` + filteredItems.map(item => renderGridCard(item)).join('') + `</div></section>`; }
             }
-            
-            // Initialize lazy loading for new images
-            lucide.createIcons();
-            initLazyImages();
+            lucide.createIcons(); initLazyImages();
         }
 
-        function renderChefCard(item) {
-            return `
-                <div class="chef-card bg-white p-5 md:p-8 rounded-[30px] md:rounded-[40px] border-2 border-black/5 shadow-xl flex flex-col md:flex-row items-center gap-6 md:gap-8 relative overflow-hidden group">
-                    <div class="sketch-circle cursor-pointer" onclick="openPreview(${item.id})">
-                        <img src="${item.image_lh3_url}" 
-                             alt="${item.nama}" 
-                             class="shimmer"
-                             data-src="${item.image_lh3_url}"
-                             onerror="this.src='https://via.placeholder.com/180x180/f3f4f6/9ca3af?text=Foto'; this.classList.remove('shimmer');">
-                    </div>
-                    <div class="flex-1 text-center md:text-left">
-                        ${item.badge ? `<span class="marker text-[9px] text-orange-600 tracking-widest">${item.badge}</span>` : ''}
-                        <h3 class="serif font-bold text-2xl sm:text-3xl mt-1 mb-2 cursor-pointer text-[#1a1a1a]" onclick="openPreview(${item.id})">${item.nama}</h3>
-                        <p class="text-xs text-gray-400 italic mb-6 leading-relaxed">${item.deskripsi?.substring(0, 60) || ''}...</p>
-                        <span class="price-tag text-2xl">${formatRupiah(item.harga)}</span>
-                    </div>
-                    <button onclick="addToCartDirect(${item.id}, event)" class="absolute bottom-5 right-5 w-10 h-10 md:w-12 md:h-12 bg-[#1a1a1a] text-white rounded-full flex items-center justify-center hover:bg-accent transition-all shadow-lg" aria-label="Tambah ${item.nama}">
-                        <i data-lucide="plus" size="20" stroke="#ffffff"></i>
-                    </button>
-                </div>`;
-        }
+        function renderChefCard(item) { return `<div class="chef-card bg-white p-5 md:p-8 rounded-[30px] md:rounded-[40px] border-2 border-black/5 shadow-xl flex flex-col md:flex-row items-center gap-6 md:gap-8 relative overflow-hidden group"><div class="sketch-circle cursor-pointer" onclick="openPreview('${item.id}')"><img src="${item.image_lh3_url}" alt="${item.nama}" class="shimmer" data-src="${item.image_lh3_url}" onerror="this.src='https://via.placeholder.com/180x180/f3f4f6/9ca3af?text=Foto'; this.classList.remove('shimmer');"></div><div class="flex-1 text-center md:text-left">${item.badge ? `<span class="marker text-[9px] text-orange-600 tracking-widest">${item.badge}</span>` : ''}<h3 class="serif font-bold text-2xl sm:text-3xl mt-1 mb-2 cursor-pointer text-[#1a1a1a]" onclick="openPreview('${item.id}')">${item.nama}</h3><p class="text-xs text-gray-400 italic mb-6 leading-relaxed">${(item.deskripsi||'').substring(0,60)}...</p><span class="price-tag text-2xl">${formatRupiah(item.harga)}</span></div><button onclick="addToCartDirect('${item.id}', event)" class="absolute bottom-5 right-5 w-10 h-10 md:w-12 md:h-12 bg-[#1a1a1a] text-white rounded-full flex items-center justify-center hover:bg-accent transition-all shadow-lg" aria-label="Tambah ${item.nama}"><i data-lucide="plus" size="20" stroke="#ffffff"></i></button></div>`; }
+        function renderListItem(item) { return `<div class="group flex justify-between items-end border-b-2 border-black/5 pb-4 hover:border-black transition-all"><div class="cursor-pointer flex-1" onclick="openPreview('${item.id}')"><h4 class="serif font-bold text-base sm:text-lg uppercase tracking-tight text-[#1a1a1a]">${item.nama}</h4><p class="text-[9px] text-gray-400 italic leading-tight">${(item.deskripsi||'').substring(0,80)}...</p></div><div class="flex items-center gap-4 sm:gap-6"><span class="price-tag text-lg">${formatRupiah(item.harga)}</span><button onclick="addToCartDirect('${item.id}', event)" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-black/10 flex items-center justify-center hover:bg-[#1a1a1a] hover:text-white transition-all group" aria-label="Tambah ${item.nama}"><i data-lucide="plus" size="12" stroke="currentColor" class="text-[#1a1a1a] group-hover:text-white"></i></button></div></div>`; }
+        function renderGridCard(item) { return `<div class="menu-card-filtered bg-white p-6 sm:p-8 rounded-[30px] md:rounded-[40px] border-2 border-black/5 shadow-lg text-center relative flex flex-col items-center"><div class="sketch-circle mb-6 sm:mb-8 cursor-pointer" onclick="openPreview('${item.id}')"><img src="${item.image_lh3_url}" alt="${item.nama}" class="shimmer" data-src="${item.image_lh3_url}" onerror="this.src='https://via.placeholder.com/180x180/f3f4f6/9ca3af?text=Foto'; this.classList.remove('shimmer');"></div><div class="cursor-pointer flex-1 mb-6" onclick="openPreview('${item.id}')"><h3 class="marker text-xl mb-2 text-[#1a1a1a]">${item.nama}</h3><p class="text-xs text-gray-400 italic mb-4 leading-relaxed">${item.deskripsi||''}</p><span class="price-tag text-2xl">${formatRupiah(item.harga)}</span></div><button onclick="addToCartDirect('${item.id}', event)" class="w-full py-4 bg-[#1a1a1a] text-white rounded-2xl flex items-center justify-center gap-2 hover:bg-orange-600 transition-all font-bold text-[11px] uppercase tracking-widest"><i data-lucide="plus" size="14" stroke="#ffffff"></i> Tambah Ke Pesanan</button></div>`; }
+        function initLazyImages() { document.querySelectorAll('img[data-src]').forEach(img => { if (img.complete && img.naturalHeight !== 0) { img.src = img.dataset.src; img.classList.remove('shimmer'); } }); }
 
-        function renderListItem(item) {
-            return `
-                <div class="group flex justify-between items-end border-b-2 border-black/5 pb-4 hover:border-black transition-all">
-                    <div class="cursor-pointer flex-1" onclick="openPreview(${item.id})">
-                        <h4 class="serif font-bold text-base sm:text-lg uppercase tracking-tight text-[#1a1a1a]">${item.nama}</h4>
-                        <p class="text-[9px] text-gray-400 italic leading-tight">${item.deskripsi?.substring(0, 80) || ''}...</p>
-                    </div>
-                    <div class="flex items-center gap-4 sm:gap-6">
-                        <span class="price-tag text-lg">${formatRupiah(item.harga)}</span>
-                        <button onclick="addToCartDirect(${item.id}, event)" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-black/10 flex items-center justify-center hover:bg-[#1a1a1a] hover:text-white transition-all group" aria-label="Tambah ${item.nama}">
-                            <i data-lucide="plus" size="12" stroke="currentColor" class="text-[#1a1a1a] group-hover:text-white"></i>
-                        </button>
-                    </div>
-                </div>`;
-        }
+        // ============ PREVIEW & CART ============
+        function openPreview(id) { currentIdx = menuItems.findIndex(i => i.id == id); const item = menuItems[currentIdx]; if (!item) { showError('Menu tidak ditemukan'); return; } const modal = document.getElementById('previewModal'), content = document.getElementById('modalContent'); content.innerHTML = `<div class="flex flex-col items-center text-center"><div class="sketch-circle mb-6 sm:mb-8 scale-100 sm:scale-110 cursor-pointer" onclick="openPreview('${item.id}')"><img src="${item.image_lh3_url}" alt="${item.nama}" class="shimmer" data-src="${item.image_lh3_url}" onerror="this.src='https://via.placeholder.com/180x180/f3f4f6/9ca3af?text=Foto'; this.classList.remove('shimmer');"></div><span class="text-[9px] uppercase font-bold tracking-[0.4em] text-orange-600 mb-2">${item.kategori}</span><h2 class="marker text-3xl sm:text-4xl mb-4 text-[#1a1a1a]">${item.nama}</h2><p class="serif italic text-sm sm:text-lg text-gray-500 mb-8 sm:mb-10 leading-relaxed">${item.deskripsi||''}</p>${item.allergen_tags?.length ? `<div class="flex flex-wrap justify-center gap-2 mb-6">${item.allergen_tags.map(tag=>`<span class="px-3 py-1 bg-gray-100 rounded-full text-[10px] uppercase tracking-wide">${tag}</span>`).join('')}</div>`:''}<div class="w-full mb-6 text-left"><label class="text-[9px] uppercase font-bold text-gray-400 mb-2 block font-sans tracking-wider">Catatan (Opsional):</label><input type="text" id="itemNote" placeholder="Cth: Pedas sedang, Tanpa gula..." class="w-full p-3 bg-gray-50 border border-gray-100 rounded-xl text-xs outline-none focus:border-accent transition-all"></div><div class="w-full bg-gray-100 p-4 sm:p-6 rounded-[24px] sm:rounded-3xl mb-6 flex justify-between items-center"><span class="price-tag text-2xl sm:text-3xl">${formatRupiah(item.harga)}</span><div class="flex items-center gap-3 sm:gap-4"><button onclick="changeQtyPreview(-1)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Kurangi">-</button><span id="pQty" class="font-bold text-lg sm:text-xl receipt-font text-[#1a1a1a]">1</span><button onclick="changeQtyPreview(1)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Tambah">+</button></div></div><button onclick="addToCartModal('${item.id}')" class="w-full bg-[#1a1a1a] text-white py-4 sm:py-5 rounded-2xl font-bold uppercase tracking-widest text-[11px] sm:text-sm flex items-center justify-center gap-3 shadow-lg hover:bg-orange-600 transition-all"><i data-lucide="shopping-bag" size="18" stroke="#ffffff"></i> Tambah Ke Keranjang</button></div>`; tempQty = 1; modal.classList.add('active'); lucide.createIcons(); initLazyImages(); }
+        let tempQty = 1; function changeQtyPreview(v) { tempQty = Math.max(1, tempQty + v); document.getElementById('pQty').innerText = tempQty; }
+        function addToCartDirect(id, event) { if(event) event.stopPropagation(); const item = menuItems.find(i => i.id == id); if (item) executeAddToCart(item, 1, ""); }
+        function addToCartModal(id) { const item = menuItems.find(i => i.id == id); if (!item) return; const note = document.getElementById('itemNote')?.value.trim() || ""; executeAddToCart(item, tempQty, note); closeModal(); }
+        function executeAddToCart(item, qty, note) { const existing = cart.find(c => c.id == item.id && c.note === note); if (existing) existing.qty += qty; else cart.push({id: item.id, nama: item.nama, harga: item.harga, qty: qty, note: note, kategori: item.kategori}); localStorage.setItem(CONFIG.CACHE_KEYS.CART, JSON.stringify(cart)); updateCartUI(); showToast('itemAddedToast', 'Item ditambahkan!'); const badge = document.getElementById('cartCountBadge'); badge.classList.add('cart-count-anim'); setTimeout(() => badge.classList.remove('cart-count-anim'), 500); }
+        function updateCartUI() { const count = cart.reduce((a,b)=>a+b.qty,0), total = cart.reduce((a,b)=>a+(b.harga*b.qty),0); document.getElementById('cartCountBadge').innerText = count; document.getElementById('cartTotalPrice').innerText = formatRupiah(total); const list = document.getElementById('cartItemsList'); if (cart.length === 0) list.innerHTML = `<div class="text-center py-10 opacity-30 italic text-sm uppercase tracking-widest font-bold text-[#1a1a1a]">Pesanan Kosong</div>`; else list.innerHTML = cart.map((i,idx)=>`<div class="bg-white p-4 rounded-xl border border-black/5 shadow-sm"><div class="flex justify-between items-start"><div class="flex-1"><h4 class="font-bold text-[11px] uppercase text-[#1a1a1a]">${i.nama}</h4><p class="text-[9px] text-gray-400">${formatRupiah(i.harga)}</p>${i.note?`<p class="text-[9px] text-accent italic mt-1 font-semibold">"${i.note}"</p>`:''}</div><div class="flex items-center gap-3"><button onclick="changeCartQty(${idx},-1)" class="w-7 h-7 rounded-full bg-gray-50 border border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Kurangi">-</button><span class="font-bold text-xs text-[#1a1a1a]">${i.qty}</span><button onclick="changeCartQty(${idx},1)" class="w-7 h-7 rounded-full bg-gray-50 border border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Tambah">+</button></div></div></div>`).join(''); }
+        function changeCartQty(idx, v) { cart[idx].qty += v; if (cart[idx].qty <= 0) cart.splice(idx, 1); localStorage.setItem(CONFIG.CACHE_KEYS.CART, JSON.stringify(cart)); updateCartUI(); }
+        function toggleTableSelection() { const isDine = document.getElementById('orderType').value === 'Dine-in'; document.getElementById('tableWrapper').style.opacity = isDine ? '1' : '0.3'; document.getElementById('tableNum').disabled = !isDine; if (!isDine) document.getElementById('tableNum').value = ''; }
 
-        function renderGridCard(item) {
-            return `
-                <div class="menu-card-filtered bg-white p-6 sm:p-8 rounded-[30px] md:rounded-[40px] border-2 border-black/5 shadow-lg text-center relative flex flex-col items-center">
-                    <div class="sketch-circle mb-6 sm:mb-8 cursor-pointer" onclick="openPreview(${item.id})">
-                        <img src="${item.image_lh3_url}" 
-                             alt="${item.nama}" 
-                             class="shimmer"
-                             data-src="${item.image_lh3_url}"
-                             onerror="this.src='https://via.placeholder.com/180x180/f3f4f6/9ca3af?text=Foto'; this.classList.remove('shimmer');">
-                    </div>
-                    <div class="cursor-pointer flex-1 mb-6" onclick="openPreview(${item.id})">
-                        <h3 class="marker text-xl mb-2 text-[#1a1a1a]">${item.nama}</h3>
-                        <p class="text-xs text-gray-400 italic mb-4 leading-relaxed">${item.deskripsi || ''}</p>
-                        <span class="price-tag text-2xl">${formatRupiah(item.harga)}</span>
-                    </div>
-                    <button onclick="addToCartDirect(${item.id}, event)" class="w-full py-4 bg-[#1a1a1a] text-white rounded-2xl flex items-center justify-center gap-2 hover:bg-orange-600 transition-all font-bold text-[11px] uppercase tracking-widest">
-                        <i data-lucide="plus" size="14" stroke="#ffffff"></i> Tambah Ke Pesanan
-                    </button>
-                </div>`;
-        }
-
-        function initLazyImages() {
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                if (img.complete && img.naturalHeight !== 0) {
-                    img.src = img.dataset.src;
-                    img.classList.remove('shimmer');
-                }
-            });
-        }
-
-        // ============ PREVIEW MODAL ============
-        function openPreview(id) {
-            currentIdx = menuItems.findIndex(i => i.id === id);
-            const item = menuItems[currentIdx];
-            
-            if (!item) {
-                showError('Menu tidak ditemukan');
-                return;
-            }
-            
-            const modal = document.getElementById('previewModal');
-            const content = document.getElementById('modalContent');
-            
-            content.innerHTML = `
-                <div class="flex flex-col items-center text-center">
-                    <div class="sketch-circle mb-6 sm:mb-8 scale-100 sm:scale-110 cursor-pointer" onclick="openPreview(${item.id})">
-                        <img src="${item.image_lh3_url}" 
-                             alt="${item.nama}"
-                             class="shimmer"
-                             data-src="${item.image_lh3_url}"
-                             onerror="this.src='https://via.placeholder.com/180x180/f3f4f6/9ca3af?text=Foto'; this.classList.remove('shimmer');">
-                    </div>
-                    <span class="text-[9px] uppercase font-bold tracking-[0.4em] text-orange-600 mb-2">${item.kategori}</span>
-                    <h2 class="marker text-3xl sm:text-4xl mb-4 text-[#1a1a1a]">${item.nama}</h2>
-                    <p class="serif italic text-sm sm:text-lg text-gray-500 mb-8 sm:mb-10 leading-relaxed">${item.deskripsi || ''}</p>
-                    
-                    ${item.allergen_tags?.length ? `
-                        <div class="flex flex-wrap justify-center gap-2 mb-6">
-                            ${item.allergen_tags.map(tag => `
-                                <span class="px-3 py-1 bg-gray-100 rounded-full text-[10px] uppercase tracking-wide">${tag}</span>
-                            `).join('')}
-                        </div>
-                    ` : ''}
-                    
-                    <div class="w-full mb-6 text-left">
-                        <label class="text-[9px] uppercase font-bold text-gray-400 mb-2 block font-sans tracking-wider">Catatan (Opsional):</label>
-                        <input type="text" id="itemNote" placeholder="Cth: Pedas sedang, Tanpa gula..." 
-                               class="w-full p-3 bg-gray-50 border border-gray-100 rounded-xl text-xs outline-none focus:border-accent transition-all">
-                    </div>
-                    
-                    <div class="w-full bg-gray-100 p-4 sm:p-6 rounded-[24px] sm:rounded-3xl mb-6 flex justify-between items-center">
-                        <span class="price-tag text-2xl sm:text-3xl">${formatRupiah(item.harga)}</span>
-                        <div class="flex items-center gap-3 sm:gap-4">
-                            <button onclick="changeQtyPreview(-1)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Kurangi jumlah">-</button>
-                            <span id="pQty" class="font-bold text-lg sm:text-xl receipt-font text-[#1a1a1a]">1</span>
-                            <button onclick="changeQtyPreview(1)" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Tambah jumlah">+</button>
-                        </div>
-                    </div>
-                    
-                    <button onclick="addToCartModal(${item.id})" class="w-full bg-[#1a1a1a] text-white py-4 sm:py-5 rounded-2xl font-bold uppercase tracking-widest text-[11px] sm:text-sm flex items-center justify-center gap-3 shadow-lg hover:bg-orange-600 transition-all">
-                        <i data-lucide="shopping-bag" size="18" stroke="#ffffff"></i> Tambah Ke Keranjang
-                    </button>
-                </div>`;
-            
-            tempQty = 1;
-            modal.classList.add('active');
-            lucide.createIcons();
-            initLazyImages();
-        }
-
-        let tempQty = 1;
-        function changeQtyPreview(v) { 
-            tempQty = Math.max(1, tempQty + v); 
-            document.getElementById('pQty').innerText = tempQty; 
-        }
-
-        // ============ CART FUNCTIONS ============
-        function addToCartDirect(id, event) {
-            if(event) event.stopPropagation();
-            const item = menuItems.find(i => i.id === id);
-            if (item) {
-                executeAddToCart(item, 1, "");
-            }
-        }
-
-        function addToCartModal(id) {
-            const item = menuItems.find(i => i.id === id);
-            if (!item) return;
-            
-            const note = document.getElementById('itemNote')?.value.trim() || "";
-            executeAddToCart(item, tempQty, note);
-            closeModal();
-        }
-
-        function executeAddToCart(item, qty, note) {
-            // Check if item with same note already exists
-            const existing = cart.find(c => c.id === item.id && c.note === note);
-            
-            if (existing) {
-                existing.qty += qty;
-            } else {
-                cart.push({
-                    id: item.id,
-                    nama: item.nama,
-                    harga: item.harga,
-                    qty: qty,
-                    note: note,
-                    kategori: item.kategori
-                });
-            }
-            
-            // Save to localStorage (persistence)
-            localStorage.setItem(CONFIG.CACHE_KEYS.CART, JSON.stringify(cart));
-            
-            updateCartUI();
-            showToast('itemAddedToast', 'Item ditambahkan!');
-            
-            // Animate badge
-            const badge = document.getElementById('cartCountBadge');
-            badge.classList.add('cart-count-anim');
-            setTimeout(() => badge.classList.remove('cart-count-anim'), 500);
-        }
-
-        function updateCartUI() {
-            const count = cart.reduce((a, b) => a + b.qty, 0);
-            const total = cart.reduce((a, b) => a + (b.harga * b.qty), 0);
-            
-            document.getElementById('cartCountBadge').innerText = count;
-            document.getElementById('cartTotalPrice').innerText = formatRupiah(total);
-            
-            const list = document.getElementById('cartItemsList');
-            if (cart.length === 0) {
-                list.innerHTML = `<div class="text-center py-10 opacity-30 italic text-sm uppercase tracking-widest font-bold text-[#1a1a1a]">Pesanan Kosong</div>`;
-            } else {
-                list.innerHTML = cart.map((i, idx) => `
-                    <div class="bg-white p-4 rounded-xl border border-black/5 shadow-sm">
-                        <div class="flex justify-between items-start">
-                            <div class="flex-1">
-                                <h4 class="font-bold text-[11px] uppercase text-[#1a1a1a]">${i.nama}</h4>
-                                <p class="text-[9px] text-gray-400">${formatRupiah(i.harga)}</p>
-                                ${i.note ? `<p class="text-[9px] text-accent italic mt-1 font-semibold">"${i.note}"</p>` : ''}
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <button onclick="changeCartQty(${idx}, -1)" class="w-7 h-7 rounded-full bg-gray-50 border border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Kurangi">-</button>
-                                <span class="font-bold text-xs text-[#1a1a1a]">${i.qty}</span>
-                                <button onclick="changeCartQty(${idx}, 1)" class="w-7 h-7 rounded-full bg-gray-50 border border-black/10 flex items-center justify-center text-[#1a1a1a] hover:bg-white transition-all" aria-label="Tambah">+</button>
-                            </div>
-                        </div>
-                    </div>`).join('');
-            }
-        }
-
-        function changeCartQty(idx, v) {
-            cart[idx].qty += v;
-            if (cart[idx].qty <= 0) {
-                cart.splice(idx, 1);
-            }
-            localStorage.setItem(CONFIG.CACHE_KEYS.CART, JSON.stringify(cart));
-            updateCartUI();
-        }
-
-        function toggleTableSelection() {
-            const isDine = document.getElementById('orderType').value === 'Dine-in';
-            const wrapper = document.getElementById('tableWrapper');
-            const select = document.getElementById('tableNum');
-            
-            wrapper.style.opacity = isDine ? '1' : '0.3';
-            select.disabled = !isDine;
-            if (!isDine) select.value = '';
-        }
-
-        // ============ CHECKOUT & ORDER ============
+        // ============ CHECKOUT ============
         async function processCheckout() {
-            // Validation
-            const nameInput = document.getElementById('custName');
-            const typeSelect = document.getElementById('orderType');
-            const tableSelect = document.getElementById('tableNum');
-            
-            if (cart.length === 0) {
-                showToast('cartEmptyToast', 'Keranjang masih kosong!');
-                return;
-            }
-            
-            if (!isOnline) {
-                showError('Tidak dapat memproses pesanan saat offline');
-                return;
-            }
-            
+            const nameInput = document.getElementById('custName'), typeSelect = document.getElementById('orderType'), tableSelect = document.getElementById('tableNum');
+            if (cart.length === 0) { showToast('cartEmptyToast', 'Keranjang masih kosong!'); return; }
+            if (!isOnline) { showError('Tidak dapat memproses pesanan saat offline'); return; }
             let isValid = true;
-            
-            if (!nameInput.value.trim() || nameInput.value.length < 2) { 
-                nameInput.classList.add('validation-error'); 
-                isValid = false; 
-            } else {
-                nameInput.classList.remove('validation-error');
-            }
-            
-            if (!typeSelect.value) { 
-                typeSelect.classList.add('validation-error'); 
-                isValid = false; 
-            } else {
-                typeSelect.classList.remove('validation-error');
-            }
-            
-            if (typeSelect.value === 'Dine-in' && !tableSelect.value) { 
-                tableSelect.classList.add('validation-error'); 
-                isValid = false; 
-            } else {
-                tableSelect.classList.remove('validation-error');
-            }
-            
-            if (!isValid) {
-                showError('Mohon lengkapi data yang diperlukan');
-                return;
-            }
-            
-            // Disable button during processing
-            const btn = document.getElementById('checkoutBtn');
-            const originalText = document.getElementById('checkoutText').textContent;
-            btn.disabled = true;
-            document.getElementById('checkoutText').textContent = 'Memproses...';
-            
+            if (!nameInput.value.trim() || nameInput.value.length < 2) { nameInput.classList.add('validation-error'); isValid = false; } else nameInput.classList.remove('validation-error');
+            if (!typeSelect.value) { typeSelect.classList.add('validation-error'); isValid = false; } else typeSelect.classList.remove('validation-error');
+            if (typeSelect.value === 'Dine-in' && !tableSelect.value) { tableSelect.classList.add('validation-error'); isValid = false; } else tableSelect.classList.remove('validation-error');
+            if (!isValid) { showError('Mohon lengkapi data yang diperlukan'); return; }
+            const btn = document.getElementById('checkoutBtn'), originalText = document.getElementById('checkoutText').textContent; btn.disabled = true; document.getElementById('checkoutText').textContent = 'Memproses...';
             try {
-                // Prepare order data for API
-                const orderData = {
-                    customer_name: nameInput.value.trim(),
-                    type: typeSelect.value,
-                    table_no: typeSelect.value === 'Dine-in' ? tableSelect.value : null,
-                    items: cart.map(item => ({
-                        id: item.id,
-                        nama: item.nama,
-                        harga: item.harga,
-                        qty: item.qty,
-                        note: item.note,
-                        kategori: item.kategori
-                    })),
-                    payment_method: 'cash', // Default, bisa dikembangkan
-                    notes: '' // Bisa ditambah field khusus notes order
-                };
-                
-                // Send to backend
-                const result = await API.createOrder(orderData);
-                
-                // Generate receipt locally for display
-                generateReceipt(result.order_id, orderData, cart);
-                
-                // Clear cart after successful order
-                cart = [];
-                localStorage.setItem(CONFIG.CACHE_KEYS.CART, JSON.stringify(cart));
-                updateCartUI();
-                closeCart();
-                
-                // Show receipt modal
-                document.getElementById('receiptModal').classList.add('active');
-                lucide.createIcons();
-                
-            } catch (error) {
-                console.error('Checkout error:', error);
-                showError(error.message || 'Gagal memproses pesanan. Silakan coba lagi.');
-            } finally {
-                // Restore button
-                btn.disabled = !isOnline;
-                document.getElementById('checkoutText').textContent = isOnline ? 'Bayar di Kasir' : 'Offline - Tidak Bisa Order';
-            }
+                const orderData = { customer_name: nameInput.value.trim(), type: typeSelect.value, table_no: typeSelect.value === 'Dine-in' ? tableSelect.value : null, items: cart.map(item => ({id: item.id, nama: item.nama, harga: item.harga, qty: item.qty, note: item.note, kategori: item.kategori})), payment_method: 'cash', notes: '' };
+                const result = await API.createOrder(orderData); generateReceipt(result.order_id, orderData, cart); cart = []; localStorage.setItem(CONFIG.CACHE_KEYS.CART, JSON.stringify(cart)); updateCartUI(); closeCart(); document.getElementById('receiptModal').classList.add('active'); lucide.createIcons();
+            } catch (error) { console.error('Checkout error:', error); showError(error.message || 'Gagal memproses pesanan. Silakan coba lagi.'); }
+            finally { btn.disabled = !isOnline; document.getElementById('checkoutText').textContent = isOnline ? 'Bayar di Kasir' : 'Offline - Tidak Bisa Order'; }
         }
+        function generateReceipt(orderId, orderData, items) { const time = new Date().toLocaleString('id-ID'), taxRate = settings.tax_rate || 0.1; document.getElementById('recID').innerText = `ORDER ID: ${orderId}`; document.getElementById('recTime').innerText = time; document.getElementById('recCustName').innerText = orderData.customer_name; document.getElementById('recType').innerText = orderData.type; document.getElementById('recTable').innerText = orderData.table_no || '-'; document.getElementById('recTableShow').style.display = orderData.type === 'Dine-in' ? 'block' : 'none'; let sub = 0; document.getElementById('recItems').innerHTML = items.map(i => { const rowTotal = i.harga * i.qty; sub += rowTotal; return `<div class="mb-2"><div class="flex justify-between"><span>${i.nama} x${i.qty}</span><span>${formatRupiah(rowTotal)}</span></div>${i.note?`<div class="text-[9px] lowercase italic opacity-60 ml-2">- ${i.note}</div>`:''}</div>`; }).join(''); const tax = Math.round(sub * taxRate); document.getElementById('recSub').innerText = formatRupiah(sub); document.getElementById('recTax').innerText = formatRupiah(tax); document.getElementById('recTotal').innerText = formatRupiah(sub + tax); receiptSaved = false; }
 
-        function generateReceipt(orderId, orderData, items) {
-            const time = new Date().toLocaleString('id-ID');
-            const taxRate = settings.tax_rate || 0.1;
-            
-            document.getElementById('recID').innerText = `ORDER ID: ${orderId}`;
-            document.getElementById('recTime').innerText = time;
-            document.getElementById('recCustName').innerText = orderData.customer_name;
-            document.getElementById('recType').innerText = orderData.type;
-            document.getElementById('recTable').innerText = orderData.table_no || '-';
-            document.getElementById('recTableShow').style.display = orderData.type === 'Dine-in' ? 'block' : 'none';
-            
-            let sub = 0;
-            document.getElementById('recItems').innerHTML = items.map(i => {
-                const rowTotal = i.harga * i.qty;
-                sub += rowTotal;
-                return `<div class="mb-2">
-                    <div class="flex justify-between">
-                        <span>${i.nama} x${i.qty}</span>
-                        <span>${formatRupiah(rowTotal)}</span>
-                    </div>
-                    ${i.note ? `<div class="text-[9px] lowercase italic opacity-60 ml-2">- ${i.note}</div>` : ''}
-                </div>`;
-            }).join('');
-            
-            const tax = Math.round(sub * taxRate);
-            document.getElementById('recSub').innerText = formatRupiah(sub);
-            document.getElementById('recTax').innerText = formatRupiah(tax);
-            document.getElementById('recTotal').innerText = formatRupiah(sub + tax);
-            
-            receiptSaved = false;
-        }
-
-        // ============ RECEIPT FUNCTIONS ============
-        function downloadReceipt() {
-            const receipt = document.getElementById('receiptToExport');
-            const btn = event.currentTarget;
-            const originalContent = btn.innerHTML;
-            
-            btn.innerHTML = '<i data-lucide="loader" class="animate-spin text-white"></i> Memproses...';
-            btn.disabled = true;
-            lucide.createIcons();
-            
-            html2canvas(receipt, { 
-                scale: 3, 
-                backgroundColor: "#ffffff", 
-                useCORS: true,
-                logging: false
-            }).then(canvas => {
-                const link = document.createElement('a');
-                link.download = `Struk_RM_Pangkalan_${Date.now()}.png`;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-                
-                btn.innerHTML = '<i data-lucide="check" class="text-white"></i> Tersimpan!';
-                receiptSaved = true;
-                
-                setTimeout(() => { 
-                    btn.innerHTML = originalContent; 
-                    btn.disabled = false;
-                    lucide.createIcons();
-                }, 2000);
-                
-            }).catch(err => {
-                console.error('Screenshot error:', err);
-                showError('Gagal menyimpan struk. Coba screenshot manual.');
-                btn.innerHTML = originalContent;
-                btn.disabled = false;
-                lucide.createIcons();
-            });
-        }
-
-        function handleFinishReceipt() {
-            if (!receiptSaved) {
-                document.getElementById('saveReminderModal').classList.add('active');
-                lucide.createIcons();
-            } else { 
-                forceCloseReceipt(); 
-            }
-        }
-
-        function closeReminder() { 
-            document.getElementById('saveReminderModal').classList.remove('active'); 
-        }
-        
-        function forceCloseReceipt() {
-            document.getElementById('saveReminderModal').classList.remove('active');
-            document.getElementById('receiptModal').classList.remove('active');
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-
-        // ============ MODAL CONTROLS ============
-        function closeModal(e) { 
-            if (!e || e.target.id === 'previewModal') {
-                document.getElementById('previewModal').classList.remove('active');
-            }
-        }
-        
-        function openCart() { 
-            document.getElementById('cartModal').classList.add('active'); 
-            lucide.createIcons(); 
-        }
-        
-        function closeCart() { 
-            document.getElementById('cartModal').classList.remove('active'); 
-        }
-        
-        function nextMenu() { 
-            currentIdx = (currentIdx + 1) % menuItems.length; 
-            openPreview(menuItems[currentIdx].id); 
-        }
-        
-        function prevMenu() { 
-            currentIdx = (currentIdx - 1 + menuItems.length) % menuItems.length; 
-            openPreview(menuItems[currentIdx].id); 
-        }
-        
-        function copyShareLink() {
-            const el = document.createElement('textarea'); 
-            el.value = window.location.href; 
-            document.body.appendChild(el); 
-            el.select(); 
-            document.execCommand('copy'); 
-            document.body.removeChild(el);
-            showToast('shareToast', 'Tautan disalin!');
-        }
+        // ============ RECEIPT & MODALS ============
+        function downloadReceipt() { const receipt = document.getElementById('receiptToExport'), btn = event.currentTarget, originalContent = btn.innerHTML; btn.innerHTML = '<i data-lucide="loader" class="animate-spin text-white"></i> Memproses...'; btn.disabled = true; lucide.createIcons(); html2canvas(receipt, { scale: 3, backgroundColor: "#ffffff", useCORS: true, logging: false }).then(canvas => { const link = document.createElement('a'); link.download = `Struk_RM_Pangkalan_${Date.now()}.png`; link.href = canvas.toDataURL('image/png'); link.click(); btn.innerHTML = '<i data-lucide="check" class="text-white"></i> Tersimpan!'; receiptSaved = true; setTimeout(() => { btn.innerHTML = originalContent; btn.disabled = false; lucide.createIcons(); }, 2000); }).catch(err => { console.error('Screenshot error:', err); showError('Gagal menyimpan struk. Coba screenshot manual.'); btn.innerHTML = originalContent; btn.disabled = false; lucide.createIcons(); }); }
+        function handleFinishReceipt() { if (!receiptSaved) { document.getElementById('saveReminderModal').classList.add('active'); lucide.createIcons(); } else forceCloseReceipt(); }
+        function closeReminder() { document.getElementById('saveReminderModal').classList.remove('active'); }
+        function forceCloseReceipt() { document.getElementById('saveReminderModal').classList.remove('active'); document.getElementById('receiptModal').classList.remove('active'); window.scrollTo({top: 0, behavior: 'smooth'}); }
+        function closeModal(e) { if (!e || e.target.id === 'previewModal') document.getElementById('previewModal').classList.remove('active'); }
+        function openCart() { document.getElementById('cartModal').classList.add('active'); lucide.createIcons(); }
+        function closeCart() { document.getElementById('cartModal').classList.remove('active'); }
+        function nextMenu() { currentIdx = (currentIdx + 1) % menuItems.length; openPreview(menuItems[currentIdx].id); }
+        function prevMenu() { currentIdx = (currentIdx - 1 + menuItems.length) % menuItems.length; openPreview(menuItems[currentIdx].id); }
+        function copyShareLink() { const el = document.createElement('textarea'); el.value = window.location.href; document.body.appendChild(el); el.select(); document.execCommand('copy'); document.body.removeChild(el); showToast('shareToast', 'Tautan disalin!'); }
 
         // ============ APP STARTUP ============
-        // Run initialization when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initApp);
-        } else {
-            initApp();
-        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initApp); else initApp();
     </script>
 </body>
 </html>
